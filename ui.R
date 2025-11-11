@@ -1,5 +1,5 @@
-#UI Defined 
-ui <- fluidPage(theme = shinytheme("superhero"),
+#UI Defined
+ui <- fluidPage(theme = shinytheme("darkly"),
                 navbarPage(
                     
                       # mainPanel
@@ -7,31 +7,31 @@ ui <- fluidPage(theme = shinytheme("superhero"),
                   
                       # Tab 1
                     tabPanel("Tab 1",
-                             mainPanel(
-                                 tags$h3("Register to GFG:"),
-                                 textInput("txt1", "Name:", ""),
-                                 textInput("txt2", "Surname:", ""),
+                            mainPanel(
+                                tags$h3("Register to GFG:"),
+                                textInput("txt1", "Name:", ""),
+                                textInput("txt2", "Surname:", ""),
                                   textInput("txt3", "Email:", ""),
                                   textInput("txt4", "Mobile.No:", ""),
-                                 textInput("txt5", "Education:", ""),
-                                 textInput("txt6", "College:", ""),
-                                 textInput("txt7", "Programming Language:", ""),
-                                 textInput("txt8", "Area of Interest:", ""),
-                                 
-                                 hr(),
+                                textInput("txt5", "Education:", ""),
+                                textInput("txt6", "College:", ""),
+                                textInput("txt7", "Programming Language:", ""),
+                                textInput("txt8", "Area of Interest:", ""),
+                                
+                                hr(),
                                 h4("Here is your Details"),
-                               verbatimTextOutput("txtout"),
-                             )),
+                              verbatimTextOutput("txtout"),
+                            )),
                       # TabPanel
                     tabPanel("Tab 2",
-                             h3("Hello !! Here is the Plot Graph,
-                                 Slider, Dropdown and Date picker!!!"))),
-                             hr(),
-                             (
+                            h3("Hello !! Here is the Plot Graph,
+                                Slider, Dropdown and Date picker!!!"))),
+                            hr(),
+                            (
   plotOutput("plot") #PlotGraph
 ),
-                             hr(),
-                             sidebarPanel(
+                            hr(),
+                            sidebarPanel(
       sliderInput("slider", "Select a value:", min = 10,
                   max = 500, value = 125),
       selectInput("dropdown", "Select an option:",
@@ -44,4 +44,4 @@ ui <- fluidPage(theme = shinytheme("superhero"),
       textOutput("selected_option"),
       textOutput("selected_date"),
     )
- )
+)
