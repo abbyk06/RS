@@ -14,5 +14,6 @@ server <- function(input, output) {
 }
 
 
-# to Run App 
+# to Run App
 shinyApp(ui = ui, server = server)
+
